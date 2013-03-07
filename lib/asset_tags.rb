@@ -14,7 +14,7 @@ module AssetTags
     <pre><code><r:asset [name="asset name"]>...</r:asset></code></pre>
   }    
   tag 'asset' do |tag|
-    tag.locals.asset = find_asset unless tag.attr.empty?
+    tag.locals.asset, options = asset_and_options(tag) unless tag.attr.empty?
     begin
       tag.expand
     rescue Paperclip::StyleError => e
