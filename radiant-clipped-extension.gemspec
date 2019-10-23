@@ -15,7 +15,7 @@ Gem::Specification.new do |s|
   s.add_dependency "acts_as_list", "0.1.4"
   s.add_dependency "paperclip",    "~> 2.7.0"
   s.add_dependency "uuidtools",    "~> 2.1.2"
-  s.add_dependency "cocaine",      "~> 0.3.2"
+  s.add_dependency "terrapin", "~> 0.6.0"
 
   ignores = if File.exist?('.gitignore')
     File.read('.gitignore').split("\n").inject([]) {|a,p| a + Dir[p] }
